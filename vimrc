@@ -84,7 +84,7 @@ set nocompatible
 	set shiftwidth=4
 
 	" 使得按退格键时可以一次删掉 4 个空格
-	set softtabstop=2
+	set softtabstop=4
 
 	" 设定 tab 长度为 4
 	set tabstop=4
@@ -148,6 +148,10 @@ set nocompatible
 
 	" no backup
 	set nobackup
+
+	"自动缩进
+	set autoindent
+	set cindent
 
 	" 让Vim默认使用系统的剪切板
 	set clipboard=unnamed
