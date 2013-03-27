@@ -152,6 +152,6 @@ set nocompatible
 	" 让Vim默认使用系统的剪切板
 	set clipboard=unnamed
 
-	" Vim使用的ctag
-	let Tlist_Ctags_Cmd = '/usr/local/bin/ctags'
+	" Vim使用的ctag 已经不用了   系统的ctags已经软连接到/usr/local/bin/ctags
+	"let Tlist_Ctags_Cmd = '/usr/local/bin/ctags'
 " }
