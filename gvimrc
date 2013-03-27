@@ -22,9 +22,9 @@ colorscheme Tomorrow-Night-Eighties
 
 " Gui字体
 if has("mac")
-	"set guifont=Menlo:h13
+	set guifont=Menlo:h14
 	"set guifont=Droid\ Sans\ Mono\ for\ Powerline:h13
-	set guifont=Menlo\ for\ Powerline:h13
+	"set guifont=Menlo\ for\ Powerline:h15
 else
 	set guifont=Monospace\ 10
 endif
