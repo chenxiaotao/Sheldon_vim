@@ -49,6 +49,9 @@ set nocompatible
 
 		" ctrlp.vim
 		Bundle 'ctrlp.vim'
+
+		"vim-ruby/vim-ruby
+		Bundle 'vim-ruby/vim-ruby'
 	" }
 
 	" required!
@@ -151,7 +154,6 @@ set nocompatible
 
 	"自动缩进
 	set autoindent
-	set cindent
 
 	" 让Vim默认使用系统的剪切板
 	set clipboard=unnamed
