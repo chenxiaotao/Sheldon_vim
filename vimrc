@@ -56,7 +56,7 @@ set nocompatible
 " }
 
 " NERDTree setting {
-	map <F7> :NERDTreeToggle<CR>
+	map <F7> :NERDTreeToggle<cr>
 " }
 
 " TagList setting {
@@ -84,13 +84,13 @@ set nocompatible
 	set shiftwidth=4
 
 	" 使得按退格键时可以一次删掉 4 个空格
-	set softtabstop=4
+	set softtabstop=2
 
 	" 设定 tab 长度为 4
 	set tabstop=4
 
 	" 设定提示宽度的标尺为80个字符
-	set textwidth=80
+	set textwidth=100
 	set cc=+1
 
 	" 光标距离上下边距行数
@@ -151,4 +151,7 @@ set nocompatible
 
 	" 让Vim默认使用系统的剪切板
 	set clipboard=unnamed
+
+	" Vim使用的ctag
+	let Tlist_Ctags_Cmd = '/usr/local/bin/ctags'
 " }
