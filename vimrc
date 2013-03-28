@@ -158,6 +158,14 @@ set nocompatible
 	" 让Vim默认使用系统的剪切板
 	set clipboard=unnamed
 
+	set statusline=
+	set statusline+=Git:\ %{GitBranchInfoTokens()[0]}\ ░
+	set statusline+=\ %f%m
+	set statusline+=%=%{''.(&fenc!=''?&fenc:&enc).''}
+	set statusline+=\ ░\ %{&ff}
+	set statusline+=\ ░\ %y
+	set statusline+=\ ░\ [%-8.(%l,%c%)\ %-4.(%p%%%)]
+
 	" Vim使用的ctag 已经不用了   系统的ctags已经软连接到/usr/local/bin/ctags
 	"let Tlist_Ctags_Cmd = '/usr/local/bin/ctags'
 " }
