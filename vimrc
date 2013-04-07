@@ -16,41 +16,29 @@ set nocompatible
 	" plugins repos {
 		" a css/html helper
 		Bundle 'ZenCoding.vim'
-
 		" Mini buffer
 		Bundle 'minibufexplorerpp'
-
 		" The-NERD-tree
 		Bundle 'The-NERD-tree'
-
 		" Commenter for many lang
 		Bundle 'The-NERD-Commenter'
-
 		" Taglist
 		Bundle 'taglist.vim'
-
-		" Ruby on Rails plugin
-		Bundle 'tpope/vim-rails'
-
 		" match ()
 		Bundle 'matchit.zip'
-
 		" a color colorscheme
 		Bundle 'chriskempson/vim-tomorrow-theme'
-
 		" a code complete plugin
 		Bundle 'Valloric/YouCompleteMe'
-
 		" Auto close the block
 		Bundle 'AutoClose'
-
 		" Get git  branch status
 		Bundle 'Git-Branch-Info'
-
 		" ctrlp.vim
 		Bundle 'ctrlp.vim'
-
-		"vim-ruby/vim-ruby
+		" Ruby on Rails plugin
+		Bundle 'tpope/vim-rails'
+		" vim plugin for ruby language
 		Bundle 'vim-ruby/vim-ruby'
 	" }
 
@@ -152,8 +140,11 @@ set nocompatible
 	" no backup
 	set nobackup
 
-	"自动缩进
+	" 自动缩进
 	set autoindent
+
+	" remove bell
+	set vb
 
 	" 让Vim默认使用系统的剪切板
 	set clipboard=unnamed
@@ -164,7 +155,7 @@ set nocompatible
 " }
 " status {
 	set statusline=Shadow
-	set statusline+=\ Git:\ %{GitBranchInfoTokens()[0]}\ ░
+	set statusline+=\ ░Git:\ %{GitBranchInfoTokens()[0]}\ ░
 	set statusline+=\ %f%m
 	set statusline+=%=%{''.(&fenc!=''?&fenc:&enc).''}
 	set statusline+=\ ░\ %{&ff}
