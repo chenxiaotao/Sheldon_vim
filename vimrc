@@ -140,8 +140,11 @@ set nocompatible
 	" no backup
 	set nobackup
 
-	"自动缩进
+	" 自动缩进
 	set autoindent
+
+	" remove bell
+	set vb
 
 	" 让Vim默认使用系统的剪切板
 	set clipboard=unnamed
