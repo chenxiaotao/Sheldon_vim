@@ -40,6 +40,8 @@ set nocompatible
 		Bundle 'tpope/vim-rails'
 		" vim plugin for ruby language
 		Bundle 'vim-ruby/vim-ruby'
+		" Vim golang plugin
+		Bundle 'jnwhiteh/vim-golang'
 	" }
 
 	" required!
@@ -154,7 +156,6 @@ set nocompatible
 
 	" 快速保存并退出
 	map <leader>wq :wq<cr>
-
 
 	" Vim使用的ctag  已经不用了系统的ctags已经软连接到/usr/local/bin/ctags
 	"let Tlist_Ctags_Cmd = '/usr/local/bin/ctags'
