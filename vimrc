@@ -153,7 +153,7 @@ set nocompatible
 
 	" 快速退出
 	map <leader>q :q<cr>
-
+	map <leader>qq :q!<cr>
 	" 快速保存并退出
 	map <leader>wq :wq<cr>
 
