@@ -36,4 +36,4 @@ git clone https://github.com/Shadow-R/vim.git && cd vim　&& sh ./install.sh
 
 
 
-*最后说一点，原始版本来自siris*
+*最后说一点，原始版本来自siriszhuang / vim*
