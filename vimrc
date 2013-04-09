@@ -171,5 +171,5 @@ set nocompatible
 	" }
 
 	" 设置golang complete格式
-	"set completeopt=longest,menu
+	set completeopt=longest,menu
 " }
