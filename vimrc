@@ -26,13 +26,13 @@ set nocompatible
 		Bundle 'taglist.vim'
 		" match ()
 		Bundle 'matchit.zip'
-		" a color colorscheme
+		" color colorscheme
 		Bundle 'chriskempson/vim-tomorrow-theme'
-		" a code complete plugin
+		" code complete plugin
 		Bundle 'Valloric/YouCompleteMe'
-		" Auto close the block
+		" Auto close the block #when i use fund it not work very well
 		Bundle 'AutoClose'
-		" Get git  branch status
+		" Get git branch status
 		Bundle 'Git-Branch-Info'
 		" ctrlp.vim
 		Bundle 'ctrlp.vim'
@@ -159,8 +159,8 @@ set nocompatible
 
 	" Vim使用的ctag  已经不用了系统的ctags已经软连接到/usr/local/bin/ctags
 	"let Tlist_Ctags_Cmd = '/usr/local/bin/ctags'
-" }
-" status {
+
+	" status {
 	set statusline=Shadow
 	set statusline+=\ ░Git:\ %{GitBranchInfoTokens()[0]}\ ░
 	set statusline+=\ %f%m
@@ -168,4 +168,8 @@ set nocompatible
 	set statusline+=\ ░\ %{&ff}
 	set statusline+=\ ░\ %y
 	set statusline+=\ ░\ [%-8.(%l,%c%)\ %-4.(%p%%%)]
+	" }
+
+	" 设置golang complete格式
+	"set completeopt=longest,menu
 " }
