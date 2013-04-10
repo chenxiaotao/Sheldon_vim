@@ -42,6 +42,8 @@ set nocompatible
 		Bundle 'vim-ruby/vim-ruby'
 		" Vim golang plugin
 		Bundle 'jnwhiteh/vim-golang'
+		" Markdown hightline plugin
+		Bundle 'Markdown'
 	" }
 
 	" required!
