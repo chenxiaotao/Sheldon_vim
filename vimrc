@@ -164,7 +164,7 @@ set nocompatible
 
 	" status {
 	set statusline=Shadow
-	set statusline+=\ ░Git:\ %{GitBranchInfoTokens()[0]}\ ░
+	set statusline+=\ ░\ Git:\ %{GitBranchInfoTokens()[0]}\ ░
 	set statusline+=\ %f%m
 	set statusline+=%=%{''.(&fenc!=''?&fenc:&enc).''}
 	set statusline+=\ ░\ %{&ff}
