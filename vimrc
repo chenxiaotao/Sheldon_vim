@@ -42,6 +42,8 @@ set nocompatible
 		Bundle 'vim-ruby/vim-ruby'
 		" Vim golang plugin
 		Bundle 'jnwhiteh/vim-golang'
+		" Markdown hightline plugin
+		Bundle 'Markdown'
 	" }
 
 	" required!
@@ -162,7 +164,7 @@ set nocompatible
 
 	" status {
 	set statusline=Shadow
-	set statusline+=\ ░Git:\ %{GitBranchInfoTokens()[0]}\ ░
+	set statusline+=\ ░\ Git:\ %{GitBranchInfoTokens()[0]}\ ░
 	set statusline+=\ %f%m
 	set statusline+=%=%{''.(&fenc!=''?&fenc:&enc).''}
 	set statusline+=\ ░\ %{&ff}
@@ -171,5 +173,5 @@ set nocompatible
 	" }
 
 	" 设置golang complete格式
-	"set completeopt=longest,menu
+	set completeopt=longest,menu
 " }
