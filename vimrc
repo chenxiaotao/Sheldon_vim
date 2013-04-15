@@ -14,9 +14,11 @@ set nocompatible
 	Bundle 'gmarik/vundle'
 
 	" plugins repos {
-		" a css/html helper
-		Bundle 'ZenCoding.vim'
+		"" Markdown hightline plugin
+		"Bundle 'Markdown'
 		" Mini buffer
+		" code complete plugin
+		"Bundle 'Valloric/YouCompleteMe'
 		Bundle 'minibufexplorerpp'
 		" The-NERD-tree
 		Bundle 'The-NERD-tree'
@@ -28,12 +30,12 @@ set nocompatible
 		Bundle 'matchit.zip'
 		" color colorscheme
 		Bundle 'chriskempson/vim-tomorrow-theme'
-		" code complete plugin
-		Bundle 'Valloric/YouCompleteMe'
-		" Auto close the block #when i use fund it not work very well
-		Bundle 'AutoClose'
+		" Auto close the block #when i use AutoClose  found it not work very well so i use this replace it
+		Bundle 'jiangmiao/auto-pairs'
 		" Get git branch status
 		Bundle 'Git-Branch-Info'
+		" SuperTab for autocomplete
+		Bundle 'SuperTab'
 		" ctrlp.vim
 		Bundle 'ctrlp.vim'
 		" Ruby on Rails plugin
@@ -47,6 +49,7 @@ set nocompatible
 	" }
 
 	" required!
+	filetype plugin on
 	filetype plugin indent on
 " }
 
