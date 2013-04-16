@@ -19,7 +19,7 @@ git clone https://github.com/Shadow-R/vim.git && cd vim　&& sh ./install.sh
   		ln -s $GOROOT/misc/vim/autoload/go/complete.vim $HOME/.vim/autoload/gofiletype
 4. 执行完成第三步之后你需要Install gocode vim scripts. Usually it's enough to do the following:
 
-		cd vim && ./update.bash
+		cd gocode/vim && ./update.bash
 
 	update.bash script does the following:
 
