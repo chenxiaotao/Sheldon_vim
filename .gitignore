@@ -1,4 +1,4 @@
 /vim/*
+!.gitignore
 .*
 !.gitkeep
-!.gitignore
