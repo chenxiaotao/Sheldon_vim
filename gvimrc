@@ -19,6 +19,8 @@ set mouse=a
 
 " 设置颜色
 colorscheme Tomorrow-Night-Eighties
+autocmd! BufEnter,BufNewFile *.go colo yesterday
+autocmd! BufLeave *.go colo Tomorrow-Night-Bright
 
 " Gui字体
 if has("mac")

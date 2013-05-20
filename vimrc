@@ -30,6 +30,8 @@ set nocompatible
 		Bundle 'matchit.zip'
 		" color colorscheme
 		Bundle 'chriskempson/vim-tomorrow-theme'
+		" more colorful colorscheme
+		Bundle 'athom/more-colorful.vim'
 		" Auto close the block #when i use AutoClose  found it not work very well so i use this replace it
 		Bundle 'jiangmiao/auto-pairs'
 		" Get git branch status
@@ -98,6 +100,7 @@ set nocompatible
 		autocmd FileType ruby set shiftwidth=2 | set expandtab
 		autocmd FileType erlang set shiftwidth=2 | set expandtab
 		autocmd FileType php set shiftwidth=4 | set expandtab
+		autocmd FileType go set shiftwidth=4 | set softtabstop=2
 	" }
 " }
 
