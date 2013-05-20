@@ -19,7 +19,7 @@ set mouse=a
 
 " 设置颜色
 colorscheme Tomorrow-Night-Eighties
-autocmd! BufEnter,BufNewFile *.go colo yesterday
+autocmd! BufEnter,BufNewFile *.go colo last-night "yesterday在这里是一个可备选的主题
 autocmd! BufLeave *.go colo Tomorrow-Night-Bright
 
 " Gui字体
