@@ -182,7 +182,7 @@ set nocompatible
 	set completeopt=longest,menu
 
 	" 设置代码折叠
-	set foldmethod=indent
+	set foldmethod=marker
 	set foldnestmax=3
 	set nofoldenable
 
