@@ -180,4 +180,14 @@ set nocompatible
 
 	" 设置golang complete格式
 	set completeopt=longest,menu
-" }
+
+	" 设置代码折叠
+	set foldmethod=indent
+	set foldnestmax=3
+	set nofoldenable
+
+	" 设置命名列表
+	set wildmode=list:longest
+	set wildmenu
+	set wildignore=*.o,*.obj.*.~
+	" }
