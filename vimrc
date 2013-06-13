@@ -184,6 +184,7 @@ set nocompatible
 	" 设置代码折叠
 	set foldmethod=marker
 	set foldnestmax=3
+	set foldclose=all
 	set nofoldenable
 
 	" 设置命名列表
