@@ -19,7 +19,8 @@ set nocompatible
 		" Mini buffer
 		" code complete plugin
 		"Bundle 'Valloric/YouCompleteMe'
-		Bundle 'minibufexplorerpp'
+		"Bundle 'minibufexplorerpp'
+		Bundle 'jeetsukumaran/vim-buffergator'
 		" The-NERD-tree
 		Bundle 'The-NERD-tree'
 		" Commenter for many lang
