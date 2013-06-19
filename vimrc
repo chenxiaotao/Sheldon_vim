@@ -49,6 +49,8 @@ set nocompatible
 		Bundle 'jnwhiteh/vim-golang'
 		" Markdown hightline plugin
 		Bundle 'Markdown'
+		" tabular #code formate
+		Bundle 'godlygeek/tabular'
 	" }
 
 	" required!
@@ -179,17 +181,37 @@ set nocompatible
 	set statusline+=\ ░\ [%-8.(%l,%c%)\ %-4.(%p%%%)]
 	" }
 
-	" 设置golang complete格式
+	" 设置golang complete格式 {
 	set completeopt=longest,menu
+	" }
 
-	" 设置代码折叠
+	" 设置代码折叠 {
 	set foldmethod=marker
 	set foldnestmax=3
 	set foldclose=all
 	set nofoldenable
+	" }
 
-	" 设置命名列表
+	" 设置命名列表 {
 	set wildmode=list:longest
 	set wildmenu
 	set wildignore=*.o,*.obj.*.~
+	" }
+
+	" Tabular config and key map {
+	inoremap <silent> <Bar>   <Bar><Esc>:call <SID>align()<CR>a
+	function! s:align()
+		let p = '^\s*|\s.*\s|\s*$'
+		if exists(':Tabularize') && getline('.') =~# '^\s*|' && (getline(line('.')-1) =~# p || getline(line('.')+1) =~# p)
+			let column = strlen(substitute(getline('.')[0:col('.')],'[^|]','','g'))
+			let position = strlen(matchstr(getline('.')[0:col('.')],'.*|\s*\zs.*'))
+			Tabularize/|/l1
+			normal! 0
+			call search(repeat('[^|]*|',column).'\s\{-\}'.repeat('.',position),'ce',line('.'))
+			nmap <Leader>a= :Tabularize /=<CR>
+			vmap <Leader>a= :Tabularize /=<CR>
+			nmap <Leader>a: :Tabularize /:\zs<CR>
+			vmap <Leader>a: :Tabularize /:\zs<CR>
+		endif
+	endfunction
 	" }
