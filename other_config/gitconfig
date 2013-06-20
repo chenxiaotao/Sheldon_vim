@@ -1,8 +1,8 @@
 [user]
 	name = Artisan
-	email = allan-hr@163.com
+	email = huangrui@nibirutech.com
 [core]
-	excludesfile = /Users/Shadow/.gitignore
+	excludesfile = /Users/Shadow/.gitignore_global
 	editor = /usr/bin/vim
 [alias]
 	logger = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
@@ -12,9 +12,7 @@
 	st  = status
 	br = branch
 	bra = branch -a
-	ps = push
 	pso = push origin
-	pl = pull --no-ff
 	plo = pull --no-ff origin
 	ft = fetch
 	ftp = fetch -p origin
