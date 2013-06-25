@@ -199,6 +199,10 @@ set nocompatible
 	" }
 
 	" Tabular config and key map {
+	nmap <Leader>a= :Tabularize /=<CR>
+	vmap <Leader>a= :Tabularize /=<CR>
+	nmap <Leader>a: :Tabularize /:\zs<CR>
+	vmap <Leader>a: :Tabularize /:\zs<CR>
 	inoremap <silent> <Bar>   <Bar><Esc>:call <SID>align()<CR>a
 	function! s:align()
 		let p = '^\s*|\s.*\s|\s*$'
@@ -208,10 +212,6 @@ set nocompatible
 			Tabularize/|/l1
 			normal! 0
 			call search(repeat('[^|]*|',column).'\s\{-\}'.repeat('.',position),'ce',line('.'))
-			nmap <Leader>a= :Tabularize /=<CR>
-			vmap <Leader>a= :Tabularize /=<CR>
-			nmap <Leader>a: :Tabularize /:\zs<CR>
-			vmap <Leader>a: :Tabularize /:\zs<CR>
 		endif
 	endfunction
 	" }
