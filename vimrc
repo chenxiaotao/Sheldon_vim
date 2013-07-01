@@ -55,9 +55,6 @@ set nocompatible
 	filetype plugin indent on
 " }
 
-" NERDTree setting {
-	map <F7> :NERDTreeToggle<cr>
-" }
 
 " TagList setting {
 	" Show Tlist on the right
@@ -73,7 +70,11 @@ set nocompatible
 	let Tlist_GainFocus_On_ToggleOpen=1
 
 	" Mapping <F8>to Toggle the Tlist
-	map <F8> :TlistToggle<cr>
+	map <C-o> :TlistToggle<cr>
+" }
+
+" NERDTree setting {
+	map <C-g> :NERDTreeToggle<cr>
 " }
 
 " format setting {
