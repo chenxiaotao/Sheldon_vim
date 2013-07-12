@@ -34,22 +34,23 @@ ZSH_THEME="random"
 plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
+export LANG=zh_CN.UTF-8
+unsetopt correct
+unsetopt correct_all
 
 # Customize to your needs...
 
 #export GOPATH=$HOME/GITHUB/golib:/Users/Ray/Workspace/sandbox/go:$HOME/GITHUB/learning_golang
-export GOPATH=$HOME/GITHUB/golib
-#export GOROOT=/usr/local/go
+export GOPATH=$HOME/GITHUB/golib:$HOME/GITHUB/learning_golang
+export GOROOT=/usr/local/go
 #export GOBIN=$GOROOT/bin
 
-PATH=$PATH:$HOME/.rvm/bin:$GOPATH/bin # Add RVM to PATH for scripting
+PATH=$PATH:$HOME/.rvm/bin:$HOME/GITHUB/golib/bin # Add RVM to PATH for scripting
 export PATH=/opt/local/bin:$PATH
 export PATH=/opt/local/sbin:$PATH
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" # This loads RVM into a shell session. ]]
 
-export LANG=zh_CN.UTF-8
 
-#alias ios_ie_root='cd /Users/Ray/WorkSpace/IE/'
 alias ios-ge-v1-root='cd /Users/Ray/WorkSpace/GE/Generation_1/ios'
 alias ios-ge-v2-root='cd /Users/Ray/WorkSpace/GE/Generation_2/ios'
 alias android-ge-v1-root='cd /Users/Ray/WorkSpace/GE/Generation_1/android'
@@ -66,17 +67,13 @@ alias rvm_github='rvm use ruby-1.9.3@rails-github'
 alias start-rails-servic='sudo /Library/StartupItems/MySQLCOM/MySQLCOM restart && redis-server  /usr/local/etc/redis.conf && redis-server /usr/local/etc/redis_6380.conf'
 alias start-mysql-client='/usr/local/mysql/bin/mysql -uroot'
 
-#alias ctags='/usr/local/bin/ctags'
 export SVN_EDITOR=vim
-alias stagin_an_ke_deploy='cap deploy an_staging'
 #取消zsh的自动修正
 setopt CORRECT
 
 alias alias_update='~/WorkSpace/Server/server-alias/ && git pull'
-#source ~/WorkSpace/Server/server-alias/ie.server
 source ~/WorkSpace/Server/server-alias/ge.server
-source ~/WorkSpace/Server/server-alias/android-ge.server
-source ~/WorkSpace/Server/server-alias/android-ke.server
+
 man() {
   env \
     LESS_TERMCAP_mb=$(printf "\e[1;31m") \
