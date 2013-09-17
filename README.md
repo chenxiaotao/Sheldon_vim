@@ -1,4 +1,4 @@
-# Shadow vim configure
+# Ray's vim configure
 
 ##自动化脚本
 ```	
