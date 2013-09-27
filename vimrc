@@ -39,15 +39,17 @@ set nocompatible
 		" ctrlp.vim
 		Bundle 'ctrlp.vim'
 		" Ruby on Rails plugin
-		Bundle 'tpope/vim-rails'
+		"Bundle 'tpope/vim-rails'
 		" vim plugin for ruby language
-		Bundle 'vim-ruby/vim-ruby'
+		"Bundle 'vim-ruby/vim-ruby'
 		" Vim golang plugin
 		Bundle 'jnwhiteh/vim-golang'
 		" Markdown hightline plugin
 		Bundle 'Markdown'
 		" tabular #code formate
 		Bundle 'godlygeek/tabular'
+		" Python plugin high light code
+		Bundle 'klen/python-mode'
 	" }
 
 	" required!
@@ -170,7 +172,7 @@ set nocompatible
 	"let Tlist_Ctags_Cmd = '/usr/local/bin/ctags'
 
 	" status {
-	set statusline=Shadow
+	set statusline=Ray 
 	set statusline+=\ ░\ Git:\ %{GitBranchInfoTokens()[0]}\ ░
 	set statusline+=\ %f%m
 	set statusline+=%=%{''.(&fenc!=''?&fenc:&enc).''}
