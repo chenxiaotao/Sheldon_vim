@@ -181,8 +181,13 @@ set nocompatible
 	set statusline+=\ ░\ [%-8.(%l,%c%)\ %-4.(%p%%%)]
 	" }
 
+	" python mod ingnore {
+	let g:pymode_lint_ignore = "E302,E401,W0401,E501"
+	let g:pymode_breakpoint = 0
+	" }
+
 	" 设置golang complete格式 {
-	set completeopt=longest,menu
+	"set completeopt=longest,menu
 	" }
 
 	" 设置代码折叠 {
