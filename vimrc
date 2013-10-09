@@ -184,6 +184,7 @@ set nocompatible
 	" python mod ingnore {
 	let g:pymode_lint_ignore = "E302,E401,W0401,E501"
 	let g:pymode_breakpoint = 0
+	let g:pymode_folding = 1
 	" }
 
 	" 设置golang complete格式 {
@@ -191,10 +192,10 @@ set nocompatible
 	" }
 
 	" 设置代码折叠 {
-	set foldmethod=marker
-	set foldnestmax=3
-	set foldclose=all
-	set nofoldenable
+	"set foldmethod=marker
+	"set foldnestmax=3
+	"set foldclose=all
+	"set nofoldenable
 	" }
 
 	" 设置命名列表 {
