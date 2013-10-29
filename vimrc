@@ -201,6 +201,11 @@ set nocompatible
 	"set nofoldenable
 	" }
 
+	" 设置代码indentLine的标示
+	let g:indentLine_char = '┆'
+	"let g:indentLine_color_term = 239
+	"let g:indentLine_color_gui = '#6A4C9C'
+
 	" 设置命名列表 {
 	set wildmode=list:longest
 	set wildmenu
