@@ -41,7 +41,7 @@ set nocompatible
 		" Ruby on Rails plugin
 		"Bundle 'tpope/vim-rails'
 		" vim plugin for ruby language
-		"Bundle 'vim-ruby/vim-ruby'
+		Bundle 'vim-ruby/vim-ruby'
 		" Vim golang plugin
 		Bundle 'jnwhiteh/vim-golang'
 		" Markdown hightline plugin
@@ -50,6 +50,8 @@ set nocompatible
 		Bundle 'godlygeek/tabular'
 		" Python plugin high light code
 		Bundle 'klen/python-mode'
+		" Yggdroot indentLine
+		Bundle 'Yggdroot/indentLine'
 	" }
 
 	" required!
