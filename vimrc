@@ -105,7 +105,6 @@ set nocompatible
 	" 为这些语言设置缩进风格 {
 		autocmd FileType ruby set shiftwidth=2 | set expandtab
 		autocmd FileType erlang set shiftwidth=2 | set expandtab
-		autocmd FileType yaml set shiftwidth=2 | set softtabstop
 		autocmd FileType php set shiftwidth=4 | set expandtab
 		autocmd FileType go set shiftwidth=4 | set softtabstop=2
 	" }
