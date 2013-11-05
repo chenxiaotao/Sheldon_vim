@@ -39,7 +39,7 @@ set nocompatible
 		" ctrlp.vim
 		Bundle 'ctrlp.vim'
 		" Ruby on Rails plugin
-		"Bundle 'tpope/vim-rails'
+		Bundle 'tpope/vim-rails'
 		" vim plugin for ruby language
 		Bundle 'vim-ruby/vim-ruby'
 		" Vim golang plugin
@@ -105,6 +105,7 @@ set nocompatible
 	" 为这些语言设置缩进风格 {
 		autocmd FileType ruby set shiftwidth=2 | set expandtab
 		autocmd FileType erlang set shiftwidth=2 | set expandtab
+		autocmd FileType yaml set shiftwidth=2 | set softtabstop
 		autocmd FileType php set shiftwidth=4 | set expandtab
 		autocmd FileType go set shiftwidth=4 | set softtabstop=2
 	" }
