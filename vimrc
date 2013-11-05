@@ -44,6 +44,8 @@ set nocompatible
 		Bundle 'vim-ruby/vim-ruby'
 		" Vim golang plugin
 		Bundle 'jnwhiteh/vim-golang'
+		" Vim yaml plugin
+		Bundle 'avakhov/vim-yaml'
 		" Markdown hightline plugin
 		Bundle 'Markdown'
 		" tabular #code formate
