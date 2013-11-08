@@ -1,9 +1,9 @@
 [user]
-	name = Artisan
-	email = huangrui@nibirutech.com
+	name = Ray
+	email = ray.artisan@gmail.com
 [core]
 	excludesfile = /Users/Shadow/.gitignore_global
-	editor = /usr/bin/vim
+	editor = /usr/local/bin/vim
 [alias]
 	logger = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
 	mer = merge --no-ff
@@ -16,9 +16,3 @@
 	plo = pull --no-ff origin
 	ft = fetch
 	ftp = fetch -p origin
-[difftool "sourcetree"]
-	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path = 
-[mergetool "sourcetree"]
-	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
-	trustExitCode = true
