@@ -81,7 +81,7 @@ set nocompatible
 
 " NERDTree setting {
 	map <C-g> :NERDTreeToggle<cr>
-	let NERDTreeIgnore = ['.pyc', '.swp', 'rdb']  
+	let NERDTreeIgnore = ['.pyc', '.swp', 'rdb']
 " }
 
 " format setting {
