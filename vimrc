@@ -38,20 +38,21 @@ set nocompatible
 		Bundle 'SuperTab'
 		" ctrlp.vim
 		Bundle 'ctrlp.vim'
-		" Ruby on Rails plugin
-		Bundle 'tpope/vim-rails'
-		" vim plugin for ruby language
+		" vim plugin for Ruby
 		Bundle 'vim-ruby/vim-ruby'
+		Bundle 'tpope/vim-rails'
 		" Vim golang plugin
 		Bundle 'jnwhiteh/vim-golang'
+		" Vim python plugin
+		"Bundle 'python.vim'
+		"Bundle 'kevinw/pyflakes-vim'
+		Bundle 'nvie/vim-flake8'
 		" Vim yaml plugin
 		Bundle 'avakhov/vim-yaml'
 		" Markdown hightline plugin
 		Bundle 'Markdown'
 		" tabular #code formate
 		Bundle 'godlygeek/tabular'
-		" Python plugin high light code
-		Bundle 'klen/python-mode'
 		" Yggdroot indentLine
 		Bundle 'Yggdroot/indentLine'
 	" }
@@ -107,8 +108,18 @@ set nocompatible
 	" 为这些语言设置缩进风格 {
 		autocmd FileType ruby set shiftwidth=2 | set expandtab
 		autocmd FileType erlang set shiftwidth=2 | set expandtab
+		autocmd FileType python set shiftwidth=4 | set expandtab
 		autocmd FileType php set shiftwidth=4 | set expandtab
 		autocmd FileType go set shiftwidth=4 | set softtabstop=2
+	" }
+
+	" 设置代码折叠 {
+	"set foldmethod=marker
+	set foldmethod=indent
+	set foldnestmax=3
+	set foldenable
+	"set nofoldenable
+	"set foldclose=all
 	" }
 " }
 
@@ -174,7 +185,7 @@ set nocompatible
 	map <leader>wq :wq<cr>
 
 	" Vim使用的ctag  已经不用了系统的ctags已经软连接到/usr/local/bin/ctags
-	"let Tlist_Ctags_Cmd = '/usr/local/bin/ctags'
+	let Tlist_Ctags_Cmd = '/usr/local/bin/ctags'
 
 	" status {
 	set statusline=Ray 
@@ -186,26 +197,20 @@ set nocompatible
 	set statusline+=\ ░\ [%-8.(%l,%c%)\ %-4.(%p%%%)]
 	" }
 
-	" python mod ingnore {
-	let g:pymode_lint_ignore = "E302,E401,W0401,E501,W0611,W0612"
-	let g:pymode_breakpoint = 0
-	let g:pymode_folding = 1
-	" }
-
 	" 设置golang complete格式 {
 	"set completeopt=longest,menu
 	" }
 
-	" 设置代码折叠 {
-	"set foldmethod=marker
-	"set foldnestmax=3
-	"set foldclose=all
-	"set nofoldenable
-	" }
+	"vim-flake8 python plugin
+	autocmd BufWritePost *.py call Flake8()
+	map <leader>i :call Flake8()<CR>
+	let g:flake8_builtins="_,apply"
+	let g:flake8_max_line_length=120
+	let g:flake8_ignore="E302,E401,E501,F403,W293"
 
 	" 设置代码indentLine的标示
 	let g:indentLine_char = '┆'
-	"let g:indentLine_color_term = 239
+	let g:indentLine_color_term = 239
 	"let g:indentLine_color_gui = '#6A4C9C'
 
 	" 设置命名列表 {
