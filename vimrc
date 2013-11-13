@@ -1,6 +1,5 @@
 " be iMproved
 set nocompatible
-
 " Vundle setting {
 	filetype off " required!
 
@@ -44,8 +43,7 @@ set nocompatible
 		" Vim golang plugin
 		Bundle 'jnwhiteh/vim-golang'
 		" Vim python plugin
-		"Bundle 'python.vim'
-		"Bundle 'kevinw/pyflakes-vim'
+		Bundle 'hynek/vim-python-pep8-indent'
 		Bundle 'nvie/vim-flake8'
 		" Vim yaml plugin
 		Bundle 'avakhov/vim-yaml'
@@ -61,8 +59,6 @@ set nocompatible
 	filetype plugin on
 	filetype plugin indent on
 " }
-
-
 " TagList setting {
 	" Show Tlist on the right
 	let Tlist_Use_Right_Window=1
@@ -79,32 +75,24 @@ set nocompatible
 	" Mapping <F8>to Toggle the Tlist
 	map <C-o> :TlistToggle<cr>
 " }
-
 " NERDTree setting {
 	map <C-g> :NERDTreeToggle<cr>
 	let NERDTreeIgnore = ['.pyc', '.swp', 'rdb']
 " }
-
 " format setting {
 	" 开始行号
 	set number
-
 	" 设定 << 和 >> 命令移动时的宽度为 4
 	set shiftwidth=4
-
 	" 使得按退格键时可以一次删掉 4 个空格
 	set softtabstop=4
-
 	" 设定 tab 长度为 4
 	set tabstop=4
-
 	" 设定提示宽度的标尺为80个字符
 	set textwidth=100
 	set cc=+1
-
 	" 光标距离上下边距行数
 	set so=3
-
 	" 为这些语言设置缩进风格 {
 		autocmd FileType ruby set shiftwidth=2 | set expandtab
 		autocmd FileType erlang set shiftwidth=2 | set expandtab
@@ -112,7 +100,6 @@ set nocompatible
 		autocmd FileType php set shiftwidth=4 | set expandtab
 		autocmd FileType go set shiftwidth=4 | set softtabstop=2
 	" }
-
 	" 设置代码折叠 {
 	"set foldmethod=marker
 	set foldmethod=indent
@@ -122,24 +109,18 @@ set nocompatible
 	"set foldclose=all
 	" }
 " }
-
 " display setting {
 	" 显示状态栏 (默认值为 1, 无法显示状态栏)
 	set laststatus=2
-
 	" 搜索时高亮显示被找到的文本
 	set hlsearch
-
 	" 输入搜索内容时就显示搜索结果
 	set incsearch
-
 	" 显示tab以及空格
 	set list
 	set listchars=tab:>-,trail:·
-
 	" syntax on
 	syntax on
-
 	" 设置backspace
 	set backspace=indent,eol,start
 " }
@@ -165,29 +146,22 @@ set nocompatible
 " other setting {
 	" Set to auto read when a file is changed from the outside
 	set autoread
-
 	" no backup
 	set nobackup
-
 	" 自动缩进
 	set autoindent
-
 	" remove bell
 	set vb
-
 	" 让Vim默认使用系统的剪切板
 	set clipboard=unnamed
-
 	" 快速退出
 	map <leader>q :q<cr>
 	map <leader>qq :q!<cr>
 	" 快速保存并退出
 	map <leader>wq :wq<cr>
-
 	" Vim使用的ctag  已经不用了系统的ctags已经软连接到/usr/local/bin/ctags
 	let Tlist_Ctags_Cmd = '/usr/local/bin/ctags'
-
-	" status {
+	" status自定义显示 {
 	set statusline=Ray 
 	set statusline+=\ ░\ Git:\ %{GitBranchInfoTokens()[0]}\ ░
 	set statusline+=\ %f%m
@@ -196,29 +170,27 @@ set nocompatible
 	set statusline+=\ ░\ %y
 	set statusline+=\ ░\ [%-8.(%l,%c%)\ %-4.(%p%%%)]
 	" }
-
 	" 设置golang complete格式 {
 	"set completeopt=longest,menu
 	" }
-
 	"vim-flake8 python plugin
 	autocmd BufWritePost *.py call Flake8()
 	map <leader>i :call Flake8()<CR>
-	let g:flake8_builtins="_,apply"
-	let g:flake8_max_line_length=120
-	let g:flake8_ignore="E302,E401,E501,F403,W293"
-
+	let g:flake8_ignore="F403,E501"
+	"" python mod ingnore {
+	"let g:pymode_lint_ignore = "C0110,C0301,E301,E302,E401,W0401,E501,R0201,R0914,R0924,W0511,W0611,W0612,W0614"
+	"let g:pymode_breakpoint = 0
+	"let g:pymode_folding = 1
+	""}
 	" 设置代码indentLine的标示
 	let g:indentLine_char = '┆'
 	let g:indentLine_color_term = 239
 	"let g:indentLine_color_gui = '#6A4C9C'
-
 	" 设置命名列表 {
 	set wildmode=list:longest
 	set wildmenu
 	set wildignore=*.o,*.obj.*.~
 	" }
-
 	" Tabular config and key map {
 	nmap <Leader>a= :Tabularize /=<CR>
 	vmap <Leader>a= :Tabularize /=<CR>
