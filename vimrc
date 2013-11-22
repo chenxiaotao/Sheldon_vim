@@ -13,7 +13,8 @@ set nocompatible
 	Bundle 'gmarik/vundle'
 
 	" plugins repos {
-		" Mini buffer
+		"a css/html helper
+		Bundle 'ZenCoding.vim'
 		" code complete plugin
 		"Bundle 'Valloric/YouCompleteMe'
 		Bundle 'jeetsukumaran/vim-buffergator'
@@ -45,6 +46,8 @@ set nocompatible
 		" Vim python plugin
 		Bundle 'hynek/vim-python-pep8-indent'
 		Bundle 'nvie/vim-flake8'
+		" Coffee script
+		Bundle 'kchmck/vim-coffee-script'
 		" Vim yaml plugin
 		Bundle 'avakhov/vim-yaml'
 		" Markdown hightline plugin
@@ -94,15 +97,14 @@ set nocompatible
 	" 光标距离上下边距行数
 	set so=3
 	" 为这些语言设置缩进风格 {
-		autocmd FileType ruby set shiftwidth=2 | set expandtab
+		autocmd FileType ruby set shiftwidth=2 | set expandtab | set tabstop=2
 		autocmd FileType erlang set shiftwidth=2 | set expandtab
-		autocmd FileType python set shiftwidth=4 | set expandtab
+		autocmd FileType python set shiftwidth=4 | set expandtab | setlocal foldmethod=indent
 		autocmd FileType php set shiftwidth=4 | set expandtab
 		autocmd FileType go set shiftwidth=4 | set softtabstop=2
 	" }
 	" 设置代码折叠 {
-	"set foldmethod=marker
-	set foldmethod=indent
+	set foldmethod=marker
 	set foldnestmax=3
 	set foldenable
 	"set nofoldenable
