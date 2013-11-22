@@ -133,9 +133,6 @@ set nocompatible
 		let g:mapleader = ","
 	" }
 
-	" Fast saving
-	nmap <leader>w :w!<CR>
-
 	" fast change panel {
 		nmap <Tab> <C-w>w
 		nmap <c-h> <c-w><c-h>
@@ -143,6 +140,14 @@ set nocompatible
 		nmap <c-k> <c-w><c-k>
 		nmap <c-l> <c-w><c-l>
 	" }
+
+	" 快速退出
+	map <leader>q :q<cr>
+	map <leader>qq :q!<cr>
+	" 快速保存
+	nmap <leader>w :w!<CR>
+	" 快速保存并退出
+	map <leader>wq :wq<cr>
 " }
 
 " other setting {
@@ -156,11 +161,7 @@ set nocompatible
 	set vb
 	" 让Vim默认使用系统的剪切板
 	set clipboard=unnamed
-	" 快速退出
-	map <leader>q :q<cr>
-	map <leader>qq :q!<cr>
-	" 快速保存并退出
-	map <leader>wq :wq<cr>
+
 	" Vim使用的ctag  已经不用了系统的ctags已经软连接到/usr/local/bin/ctags
 	let Tlist_Ctags_Cmd = '/usr/local/bin/ctags'
 	" status自定义显示 {
