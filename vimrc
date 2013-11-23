@@ -15,6 +15,7 @@ set nocompatible
 	" plugins repos {
 		"a css/html helper
 		Bundle 'ZenCoding.vim'
+		Bundle 'mangege/web-indent'
 		" code complete plugin
 		"Bundle 'Valloric/YouCompleteMe'
 		Bundle 'jeetsukumaran/vim-buffergator'
