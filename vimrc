@@ -49,6 +49,8 @@ set nocompatible
 		Bundle 'nvie/vim-flake8'
 		" Coffee script
 		Bundle 'kchmck/vim-coffee-script'
+		" markdown plugin
+		Bundle 'hallison/vim-markdown'
 		" Vim yaml plugin
 		Bundle 'avakhov/vim-yaml'
 		" Markdown hightline plugin
@@ -98,11 +100,14 @@ set nocompatible
 	" 光标距离上下边距行数
 	set so=3
 	" 为这些语言设置缩进风格 {
-		autocmd FileType ruby set shiftwidth=2 | set expandtab | set tabstop=2
-		autocmd FileType erlang set shiftwidth=2 | set expandtab
-		autocmd FileType python set shiftwidth=4 | set expandtab | setlocal foldmethod=indent
-		autocmd FileType php set shiftwidth=4 | set expandtab
-		autocmd FileType go set shiftwidth=4 | set softtabstop=2
+		autocmd FileType ruby       set shiftwidth=2 | set expandtab |   set tabstop=2
+		autocmd FileType erlang     set shiftwidth=2 | set expandtab
+		autocmd FileType python     set shiftwidth=4 | set expandtab |   setlocal foldmethod=indent
+		autocmd FileType php        set shiftwidth=4 | set expandtab
+		autocmd FileType html       set shiftwidth=2 | set expandtab |   set tabstop=2
+		autocmd FileType eruby      set shiftwidth=2 | set expandtab |   set tabstop=2
+		"autocmd FileType javascript set shiftwidth=2 | set expandtab |   set tabstop=2
+		autocmd FileType go         set shiftwidth=4 | set softtabstop=2
 	" }
 	" 设置代码折叠 {
 	set foldmethod=marker
@@ -181,11 +186,6 @@ set nocompatible
 	autocmd BufWritePost *.py call Flake8()
 	map <leader>i :call Flake8()<CR>
 	let g:flake8_ignore="F403,E501"
-	"" python mod ingnore {
-	"let g:pymode_lint_ignore = "C0110,C0301,E301,E302,E401,W0401,E501,R0201,R0914,R0924,W0511,W0611,W0612,W0614"
-	"let g:pymode_breakpoint = 0
-	"let g:pymode_folding = 1
-	""}
 	" 设置代码indentLine的标示
 	let g:indentLine_char = '┆'
 	let g:indentLine_color_term = 239
