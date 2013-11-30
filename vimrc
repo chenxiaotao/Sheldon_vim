@@ -95,7 +95,7 @@ set nocompatible
 	" 设定 tab 长度为 4
 	set tabstop=4
 	" 设定提示宽度的标尺为80个字符
-	set textwidth=100
+	set textwidth=80
 	set cc=+1
 	" 光标距离上下边距行数
 	set so=3
@@ -106,8 +106,9 @@ set nocompatible
 		autocmd FileType php        set shiftwidth=4 | set expandtab
 		autocmd FileType html       set shiftwidth=2 | set expandtab |   set tabstop=2
 		autocmd FileType eruby      set shiftwidth=2 | set expandtab |   set tabstop=2
-		"autocmd FileType javascript set shiftwidth=2 | set expandtab |   set tabstop=2
+		autocmd FileType javascript set shiftwidth=2 | set expandtab |   set tabstop=2
 		autocmd FileType go         set shiftwidth=4 | set softtabstop=2
+		autocmd Filetype gitcommit  setlocal spell textwidth=72
 	" }
 	" 设置代码折叠 {
 	set foldmethod=marker
