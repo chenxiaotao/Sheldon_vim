@@ -100,15 +100,15 @@ set nocompatible
 	" 光标距离上下边距行数
 	set so=3
 	" 为这些语言设置缩进风格 {
-		autocmd FileType ruby       set shiftwidth=2 | set expandtab |   set tabstop=2
+		autocmd FileType ruby       set shiftwidth=2 | set expandtab | set softtabstop=2
 		autocmd FileType erlang     set shiftwidth=2 | set expandtab
-		autocmd FileType python     set shiftwidth=4 | set expandtab |   setlocal foldmethod=indent
+		autocmd FileType python     set shiftwidth=4 | set expandtab | setlocal foldmethod=indent
 		autocmd FileType php        set shiftwidth=4 | set expandtab
-		autocmd FileType html       set shiftwidth=2 | set expandtab |   set tabstop=2
-		autocmd FileType eruby      set shiftwidth=2 | set expandtab |   set tabstop=2
-		autocmd FileType javascript set shiftwidth=2 | set expandtab |   set tabstop=2
+		autocmd FileType html       set shiftwidth=2 | set expandtab | set softtabstop=2
+		autocmd FileType eruby      set shiftwidth=2 | set expandtab | set softtabstop=2
+		autocmd FileType javascript set shiftwidth=2 | set expandtab | set softtabstop=2
 		autocmd FileType go         set shiftwidth=4 | set softtabstop=2
-		autocmd Filetype gitcommit  setlocal spell textwidth=72
+		"autocmd Filetype gitcommit  setlocal spell textwidth=72
 	" }
 	" 设置代码折叠 {
 	set foldmethod=marker
@@ -171,6 +171,7 @@ set nocompatible
 
 	" Vim使用的ctag  已经不用了系统的ctags已经软连接到/usr/local/bin/ctags
 	let Tlist_Ctags_Cmd = '/usr/local/bin/ctags'
+
 	" status自定义显示 {
 	set statusline=Ray 
 	set statusline+=\ ░\ Git:\ %{GitBranchInfoTokens()[0]}\ ░
