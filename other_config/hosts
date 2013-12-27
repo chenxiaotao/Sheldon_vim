@@ -1,0 +1,21 @@
+##
+# Host Database
+#
+# localhost is used to configure the loopback interface
+# when the system is booting.  Do not change this entry.
+##
+127.0.0.1	localhost
+255.255.255.255	broadcasthost
+::1             localhost
+fe80::1%lo0	localhost
+
+192.168.100.45 soo.tao800.com sso.tao800.com sso.tuan800.com sso.hui800.com passport.tuan800.com sso.zhe800.com soo.zhe800.com
+192.168.100.45 s0.tuan800.net s1.tuan800.net s3.tuan800.net s5.tuanimg.com p11.tuan800.net p12.tuan800.net
+192.168.100.45  ued.tuan800-inc.com z0.tuanimg.com s2.tuanimg.com p0.tuanimg.com
+192.168.100.45 z0.tuanimg.com s2.tuanimg.com p0.tuanimg.com
+
+127.0.0.1 zhe800.com www.tao800.com www.zhe800.com zhi.zhe800.com zhi.tao800.com out.zhe800.com zapi.zhe800.com m.zhe800.com guang.zhe800.com 
+127.0.0.1 admin.zhe800.com
+127.0.0.1 m.zhe800.com
+
+118.186.245.123   dep.tuan800-inc.com
