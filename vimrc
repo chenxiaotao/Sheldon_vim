@@ -45,8 +45,8 @@ set nocompatible
 		" Vim golang plugin
 		Bundle 'jnwhiteh/vim-golang'
 		" Vim python plugin
-		Bundle 'hynek/vim-python-pep8-indent'
-		Bundle 'nvie/vim-flake8'
+		"Bundle 'hynek/vim-python-pep8-indent'
+		"Bundle 'nvie/vim-flake8'
 		" Coffee script
 		Bundle 'kchmck/vim-coffee-script'
 		" markdown plugin
