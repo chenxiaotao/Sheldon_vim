@@ -23,6 +23,8 @@ set nocompatible
 		Bundle 'The-NERD-tree'
 		" Commenter for many lang
 		Bundle 'The-NERD-Commenter'
+		" Git
+		Bundle 'tpope/vim-fugitive'
 		" Taglist
 		Bundle 'taglist.vim'
 		" match ()
