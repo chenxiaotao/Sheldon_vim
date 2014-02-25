@@ -96,8 +96,8 @@ set nocompatible
 	set softtabstop=4
 	" 设定 tab 长度为 4
 	set tabstop=4
-	" 设定提示宽度的标尺为80个字符
-	set textwidth=80
+	" 设定提示宽度的标尺为100个字符
+	set textwidth=100
 	set cc=+1
 	" 光标距离上下边距行数
 	set so=3
