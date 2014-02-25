@@ -23,11 +23,17 @@ if ! [ -d $vundleDir/.git ]; then
 	echo ">> Completed!"
 fi
 
+echo ">> install need pulgin"
+brew install reattach-to-user-namespace
+echo "........"
+
 echo ">> To use this configure, need next steps:"
 echo "1. Make some links"
 echo "    ln -s $path/vim ~/.vim"
 echo "    ln -s $path/vimrc ~/.vimrc"
 echo "    ln -s $path/gvimrc ~/.gvimrc"
+echo "    ln -s $path/other_config/tmux.conf ~/.tmux.conf"
+
 echo "2. Run the command to bundle install all the plugins:"
 echo "    vim +BundleInstall +qall"
 echo "3. Run the following shell to install YCM for YouCompleteMe"
