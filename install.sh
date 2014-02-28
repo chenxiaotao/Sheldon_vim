@@ -33,6 +33,7 @@ echo "    ln -s $path/vim ~/.vim"
 echo "    ln -s $path/vimrc ~/.vimrc"
 echo "    ln -s $path/gvimrc ~/.gvimrc"
 echo "    ln -s $path/other_config/tmux.conf ~/.tmux.conf"
+echo "    ln -s $path/other_config/gitconfig ~/.gitconfig"
 
 echo "2. Run the command to bundle install all the plugins:"
 echo "    vim +BundleInstall +qall"
