@@ -3,16 +3,20 @@
 	email = ray.artisan@gmail.com
 [core]
 	excludesfile = /Users/Shadow/.gitignore_global
-	editor = /usr/local/bin/vim
+	editor = /usr/bin/vim
 [alias]
 	logger = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
 	mer = merge --no-ff
+	#mer = merge
 	co = checkout
 	ca = commit -a
 	st  = status
 	br = branch
 	bra = branch -a
 	pso = push origin
+	#plo = pull origin
 	plo = pull --no-ff origin
 	ft = fetch
 	ftp = fetch -p origin
+[push]
+	default = simple
