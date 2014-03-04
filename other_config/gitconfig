@@ -14,8 +14,8 @@
 	br = branch
 	bra = branch -a
 	pso = push origin
-	#plo = pull origin
-	plo = pull --no-ff origin
+	plo = pull origin
+	#plo = pull --no-ff origin
 	ft = fetch
 	ftp = fetch -p origin
 [push]
