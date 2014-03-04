@@ -25,18 +25,19 @@ set nocompatible
 		Bundle 'The-NERD-Commenter'
 		" Git
 		Bundle 'tpope/vim-fugitive'
+		" Get git branch status
+		Bundle 'Git-Branch-Info'
 		" Taglist
 		Bundle 'taglist.vim'
 		" match ()
 		Bundle 'matchit.zip'
+
 		" color colorscheme
 		Bundle 'chriskempson/vim-tomorrow-theme'
-		" more colorful colorscheme
 		Bundle 'athom/more-colorful.vim'
-		" Auto close the block #when i use AutoClose  found it not work very well so i use this replace it
+
+		" Auto close the block
 		Bundle 'jiangmiao/auto-pairs'
-		" Get git branch status
-		Bundle 'Git-Branch-Info'
 		" SuperTab for autocomplete
 		Bundle 'SuperTab'
 		" ctrlp.vim

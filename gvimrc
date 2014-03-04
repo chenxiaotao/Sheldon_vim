@@ -18,8 +18,8 @@ set guioptions-=T
 set mouse=a
 
 " 设置颜色
-"colorscheme Tomorrow-Night-Eighties
-colorscheme last-night-bright
+colorscheme Tomorrow-Night-Eighties
+"colorscheme last-night-bright
 autocmd! BufEnter,BufNewFile *.go colo last-night-bright "yesterday在这里是一个可备选的主题
 autocmd! BufLeave *.go colo Tomorrow-Night-Bright
 
