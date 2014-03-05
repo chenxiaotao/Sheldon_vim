@@ -1,4 +1,4 @@
-# Ray's vim configure
+# Chen's vim configure
 
 ##自动化脚本
 ```	
