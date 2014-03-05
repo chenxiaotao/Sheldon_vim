@@ -99,7 +99,6 @@ set nocompatible
 	set tabstop=4
 	" 设定提示宽度的标尺为100个字符
 	set textwidth=100
-	set cc=+1
 	" 光标距离上下边距行数
 	set so=3
 	" 为这些语言设置缩进风格 {
