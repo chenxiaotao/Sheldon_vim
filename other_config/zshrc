@@ -96,6 +96,6 @@ export PATH="$HOME/.rbenv/bin:$PATH"
 export RBENV_ROOT=/usr/local/var/rbenv
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
-#tmuxinator config
-export EDITOR="vi"
-source ~/.tmuxinator.zsh
+export EDITOR='vim'
+source ~/.bin/tmuxinator.zsh
+export DISABLE_AUTO_TITLE=true
