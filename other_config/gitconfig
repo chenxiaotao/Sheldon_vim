@@ -7,20 +7,27 @@
 	editor       = /usr/bin/vim
 
 [alias]
-	logger  = log --color --graph --pretty  = format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
-	mer     = merge
-	co      = checkout
-	ca      = commit -a
-	st      = status
-	br      = branch
-	bra     = branch -a
-	pso     = push origin
-	plo     = pull origin
-	ft      = fetch origin
-	ftp     = fetch -p origin
+	logger = log --color --graph --pretty = format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
+	mer    = merge
+	co     = checkout
+	ca     = commit -a
+	st     = status
+	br     = branch
+	bra    = branch -a
+	pso    = push origin
+	plo    = pull origin
+	ft     = fetch origin
+	ftp    = fetch -p origin
+	bml    = branch --merged master
 
 [push]
 	default = simple
 
 [branch]
 	autosetuprebase = always
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Users/Ray/Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
