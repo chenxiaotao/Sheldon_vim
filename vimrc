@@ -33,18 +33,18 @@ set nocompatible
 		Bundle 'kien/ctrlp.vim'
 		" vim plugin for Ruby
 		"Bundle 'vim-ruby/vim-ruby'
-		"Bundle 'tpope/vim-rails'
+		Bundle 'tpope/vim-rails'
 		" Vim yaml plugin
-		"Bundle 'avakhov/vim-yaml'
+		Bundle 'avakhov/vim-yaml'
 		" Markdown hightline plugin
 		"Bundle 'Markdown'
 		" tabular #code formate
 		Bundle 'godlygeek/tabular'
 		" Yggdroot indentLine
 		Bundle 'Yggdroot/indentLine'
+		Bundle 'mangege/web-indent'
 		"a css/html helper
 		"Bundle 'ZenCoding.vim'
-		"Bundle 'mangege/web-indent'
 		" Vim python plugin
 		"Bundle 'hynek/vim-python-pep8-indent'
 		"Bundle 'nvie/vim-flake8'
@@ -130,6 +130,10 @@ set nocompatible
 	" <leader> key setting {
 		let mapleader = ","
 		let g:mapleader = ","
+		nmap <M-j> mz:m+<cr>`z
+		nmap <M-k> mz:m-2<cr>`z
+		vmap <M-j> :m'>+<cr>`<my`>mzgv`yo`z
+		vmap <M-k> :m'<-2<cr>`>my`<mzgv`yo`z
 	" }
 
 	" fast change panel {

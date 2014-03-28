@@ -1,5 +1,5 @@
 " 高亮显示当前行
-set cursorline
+"set cursorline
 
 " GUI中不显示滚动条
 set guioptions-=r
@@ -25,10 +25,8 @@ autocmd! BufLeave *.go colo Tomorrow-Night-Bright
 
 " Gui字体
 if has("mac")
-	set guifont=Monaco:h12
-	"set guifont=Menlo:h14
-	"set guifont=Droid\ Sans\ Mono\ for\ Powerline:h13
-	"set guifont=Menlo\ for\ Powerline:h15
+	"set guifont=Monaco:h12
+	set guifont=Menlo:h14
 else
 	set guifont=Monospace\ 10
 endif
