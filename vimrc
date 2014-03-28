@@ -11,57 +11,47 @@ set nocompatible
 
 	" let Vundle manage Vundle(required!)
 	Bundle 'gmarik/vundle'
-
 	" plugins repos {
-		"a css/html helper
-		Bundle 'ZenCoding.vim'
-		Bundle 'mangege/web-indent'
 		" code complete plugin
 		"Bundle 'Valloric/YouCompleteMe'
 		Bundle 'jeetsukumaran/vim-buffergator'
 		" The-NERD-tree
-		Bundle 'The-NERD-tree'
-		" Commenter for many lang
-		Bundle 'The-NERD-Commenter'
+		Bundle 'scrooloose/nerdtree'
+		Bundle 'scrooloose/nerdcommenter'
 		" Git
-		Bundle 'tpope/vim-fugitive'
-		" Get git branch status
 		Bundle 'Git-Branch-Info'
+		Bundle 'tpope/vim-fugitive'
 		" Taglist
-		Bundle 'taglist.vim'
-		" match ()
-		Bundle 'matchit.zip'
-
+		Bundle 'kemadz/taglist'
 		" color colorscheme
 		Bundle 'chriskempson/vim-tomorrow-theme'
-		Bundle 'athom/more-colorful.vim'
-
 		" Auto close the block
 		Bundle 'jiangmiao/auto-pairs'
 		" SuperTab for autocomplete
-		Bundle 'SuperTab'
+		Bundle 'ervandew/supertab'
 		" ctrlp.vim
-		Bundle 'ctrlp.vim'
+		Bundle 'kien/ctrlp.vim'
 		" vim plugin for Ruby
-		Bundle 'vim-ruby/vim-ruby'
-		Bundle 'tpope/vim-rails'
-		" Vim golang plugin
-		Bundle 'jnwhiteh/vim-golang'
-		" Vim python plugin
-		"Bundle 'hynek/vim-python-pep8-indent'
-		"Bundle 'nvie/vim-flake8'
-		" Coffee script
-		Bundle 'kchmck/vim-coffee-script'
-		" markdown plugin
-		Bundle 'hallison/vim-markdown'
+		"Bundle 'vim-ruby/vim-ruby'
+		"Bundle 'tpope/vim-rails'
 		" Vim yaml plugin
-		Bundle 'avakhov/vim-yaml'
+		"Bundle 'avakhov/vim-yaml'
 		" Markdown hightline plugin
-		Bundle 'Markdown'
+		"Bundle 'Markdown'
 		" tabular #code formate
 		Bundle 'godlygeek/tabular'
 		" Yggdroot indentLine
 		Bundle 'Yggdroot/indentLine'
+		"a css/html helper
+		"Bundle 'ZenCoding.vim'
+		"Bundle 'mangege/web-indent'
+		" Vim python plugin
+		"Bundle 'hynek/vim-python-pep8-indent'
+		"Bundle 'nvie/vim-flake8'
+		" Coffee script
+		"Bundle 'kchmck/vim-coffee-script'
+		" Vim golang plugin
+		"Bundle 'jnwhiteh/vim-golang'
 	" }
 
 	" required!
@@ -113,12 +103,11 @@ set nocompatible
 		autocmd FileType go         set shiftwidth=4 | set softtabstop=2
 		"autocmd Filetype gitcommit  setlocal spell textwidth=72
 	" }
+	set lazyredraw
 	" 设置代码折叠 {
 	set foldmethod=marker
 	set foldnestmax=3
 	set foldenable
-	"set nofoldenable
-	"set foldclose=all
 	" }
 " }
 " display setting {
