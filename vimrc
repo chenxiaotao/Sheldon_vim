@@ -175,7 +175,7 @@ set nocompatible
 	let Tlist_Ctags_Cmd = '/usr/local/bin/ctags'
 
 	" status自定义显示 {
-	set statusline=Ray 
+	set statusline=Sheldon 
 	set statusline+=\ ░\ Git:\ %{GitBranchInfoTokens()[0]}\ ░
 	set statusline+=\ %f%m
 	set statusline+=%=%{''.(&fenc!=''?&fenc:&enc).''}
