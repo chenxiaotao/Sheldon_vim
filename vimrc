@@ -26,6 +26,7 @@ set nocompatible
 		" color colorscheme
 		Bundle 'chriskempson/vim-tomorrow-theme'
 		" Auto close the block
+		Bundle "vim-scripts/matchit.zip"
 		Bundle 'jiangmiao/auto-pairs'
 		" SuperTab for autocomplete
 		Bundle 'ervandew/supertab'
@@ -33,7 +34,7 @@ set nocompatible
 		Bundle 'kien/ctrlp.vim'
 		" vim plugin for Ruby
 		"Bundle 'vim-ruby/vim-ruby'
-		Bundle 'tpope/vim-rails'
+		"Bundle 'tpope/vim-rails'
 		" Vim yaml plugin
 		Bundle 'avakhov/vim-yaml'
 		" Markdown hightline plugin
@@ -103,13 +104,14 @@ set nocompatible
 		autocmd FileType go         set shiftwidth=4 | set softtabstop=2
 		"autocmd Filetype gitcommit  setlocal spell textwidth=72
 	" }
-	set lazyredraw
+
 	" 设置代码折叠 {
 	set foldmethod=marker
 	set foldnestmax=3
 	set foldenable
 	" }
 " }
+
 " display setting {
 	" 显示状态栏 (默认值为 1, 无法显示状态栏)
 	set laststatus=2
@@ -124,6 +126,7 @@ set nocompatible
 	syntax on
 	" 设置backspace
 	set backspace=indent,eol,start
+	"set lazyredraw
 " }
 
 " key map {
@@ -188,11 +191,13 @@ set nocompatible
 	let g:indentLine_char = '┆'
 	let g:indentLine_color_term = 239
 	"let g:indentLine_color_gui = '#6A4C9C'
+
 	" 设置命名列表 {
 	set wildmode=list:longest
 	set wildmenu
 	set wildignore=*.o,*.obj.*.~
 	" }
+
 	" Tabular config and key map {
 	nmap <Leader>a= :Tabularize /=<CR>
 	vmap <Leader>a= :Tabularize /=<CR>
