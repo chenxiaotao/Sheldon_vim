@@ -24,8 +24,10 @@ colorscheme Tomorrow-Night-Eighties
 
 " Gui字体
 if has("mac")
-	"set guifont=Monaco:h12
-	set guifont=Menlo:h14
+	"set guifont=Monaco:h14
+	"set guifont=Menlo:h14
+	"set guifont=Source\ Code\ Pro:h14
+	set guifont=Inconsolata-g:h14
 else
 	set guifont=Monospace\ 10
 endif

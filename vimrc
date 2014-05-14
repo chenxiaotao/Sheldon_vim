@@ -14,7 +14,7 @@ set nocompatible
 	" plugins repos {
 		" code complete plugin
 		"Bundle 'Valloric/YouCompleteMe'
-		Bundle 'jeetsukumaran/vim-buffergator'
+		"Bundle 'jeetsukumaran/vim-buffergator'
 		" The-NERD-tree
 		Bundle 'scrooloose/nerdtree'
 		Bundle 'scrooloose/nerdcommenter'
@@ -27,14 +27,15 @@ set nocompatible
 		Bundle 'chriskempson/vim-tomorrow-theme'
 		" Auto close the block
 		Bundle "vim-scripts/matchit.zip"
-		Bundle 'jiangmiao/auto-pairs'
+		Bundle "jiangmiao/auto-pairs"
 		" SuperTab for autocomplete
 		Bundle 'ervandew/supertab'
 		" ctrlp.vim
 		Bundle 'kien/ctrlp.vim'
 		" vim plugin for Ruby
 		"Bundle 'vim-ruby/vim-ruby'
-		"Bundle 'tpope/vim-rails'
+		Bundle 'tpope/vim-rails'
+		Bundle 'tpope/vim-surround'
 		" Vim yaml plugin
 		Bundle 'avakhov/vim-yaml'
 		" Markdown hightline plugin
@@ -172,7 +173,7 @@ set nocompatible
 	let Tlist_Ctags_Cmd = '/usr/local/bin/ctags'
 
 	" status自定义显示 {
-	set statusline=Ray 
+	set statusline=\ Ray 
 	set statusline+=\ ░\ Git:\ %{GitBranchInfoTokens()[0]}\ ░
 	set statusline+=\ %f%m
 	set statusline+=%=%{''.(&fenc!=''?&fenc:&enc).''}
@@ -183,14 +184,15 @@ set nocompatible
 	" 设置golang complete格式 {
 	"set completeopt=longest,menu
 	" }
+
 	"vim-flake8 python plugin
-	autocmd BufWritePost *.py call Flake8()
-	map <leader>i :call Flake8()<CR>
-	let g:flake8_ignore="F403,E501"
+	"autocmd BufWritePost *.py call Flake8()
+	"map <leader>i :call Flake8()<CR>
+	"let g:flake8_ignore="F403,E501"
+"
 	" 设置代码indentLine的标示
 	let g:indentLine_char = '┆'
 	let g:indentLine_color_term = 239
-	"let g:indentLine_color_gui = '#6A4C9C'
 
 	" 设置命名列表 {
 	set wildmode=list:longest
