@@ -99,3 +99,6 @@ if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 export EDITOR='vim'
 source ~/.bin/tmuxinator.zsh
 export DISABLE_AUTO_TITLE=true
+
+#nvm nodejs version manage
+source $(brew --prefix nvm)/nvm.sh
