@@ -55,10 +55,10 @@ set nocompatible
 		" Vim nodejs
 		Bundle 'moll/vim-node'
 		" Vim js more beatiful
-		Bundle 'maksimr/vim-jsbeautify'
-		Bundle 'einars/js-beautify'
+		"Bundle 'maksimr/vim-jsbeautify'
+		"Bundle 'einars/js-beautify'
 		" JS completion
-		Bundle 'ahayman/vim-nodejs-complete'
+		"Bundle 'ahayman/vim-nodejs-complete'
 		" SuperTab for autocomplete
 		Bundle 'ervandew/supertab'
 	" }
@@ -227,4 +227,4 @@ set nocompatible
 	" }
 
 	" Js Beatiful
-	map <c-f> :call JsBeautify()<cr>
+	"map <c-f> :call JsBeautify()<cr>
