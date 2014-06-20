@@ -11,57 +11,56 @@ set nocompatible
 
 	" let Vundle manage Vundle(required!)
 	Bundle 'gmarik/vundle'
-
 	" plugins repos {
-		"a css/html helper
-		Bundle 'ZenCoding.vim'
-		Bundle 'mangege/web-indent'
 		" code complete plugin
 		"Bundle 'Valloric/YouCompleteMe'
-		Bundle 'jeetsukumaran/vim-buffergator'
+		"Bundle 'jeetsukumaran/vim-buffergator'
 		" The-NERD-tree
-		Bundle 'The-NERD-tree'
-		" Commenter for many lang
-		Bundle 'The-NERD-Commenter'
+		Bundle 'scrooloose/nerdtree'
+		Bundle 'scrooloose/nerdcommenter'
 		" Git
-		Bundle 'tpope/vim-fugitive'
-		" Get git branch status
 		Bundle 'Git-Branch-Info'
+		Bundle 'tpope/vim-fugitive'
 		" Taglist
-		Bundle 'taglist.vim'
-		" match ()
-		Bundle 'matchit.zip'
-
+		Bundle 'kemadz/taglist'
 		" color colorscheme
 		Bundle 'chriskempson/vim-tomorrow-theme'
-		Bundle 'athom/more-colorful.vim'
-
 		" Auto close the block
-		Bundle 'jiangmiao/auto-pairs'
-		" SuperTab for autocomplete
-		Bundle 'SuperTab'
+		Bundle "vim-scripts/matchit.zip"
+		Bundle "jiangmiao/auto-pairs"
 		" ctrlp.vim
-		Bundle 'ctrlp.vim'
+		Bundle 'kien/ctrlp.vim'
 		" vim plugin for Ruby
-		Bundle 'vim-ruby/vim-ruby'
+		"Bundle 'vim-ruby/vim-ruby'
 		Bundle 'tpope/vim-rails'
-		" Vim golang plugin
-		Bundle 'jnwhiteh/vim-golang'
-		" Vim python plugin
-		"Bundle 'hynek/vim-python-pep8-indent'
-		"Bundle 'nvie/vim-flake8'
-		" Coffee script
-		Bundle 'kchmck/vim-coffee-script'
-		" markdown plugin
-		Bundle 'hallison/vim-markdown'
+		Bundle 'tpope/vim-surround'
 		" Vim yaml plugin
 		Bundle 'avakhov/vim-yaml'
 		" Markdown hightline plugin
-		Bundle 'Markdown'
+		"Bundle 'Markdown'
 		" tabular #code formate
 		Bundle 'godlygeek/tabular'
 		" Yggdroot indentLine
 		Bundle 'Yggdroot/indentLine'
+		Bundle 'mangege/web-indent'
+		"a css/html helper
+		"Bundle 'ZenCoding.vim'
+		" Vim python plugin
+		"Bundle 'hynek/vim-python-pep8-indent'
+		"Bundle 'nvie/vim-flake8'
+		" Coffee script
+		"Bundle 'kchmck/vim-coffee-script'
+		" Vim golang plugin
+		"Bundle 'jnwhiteh/vim-golang'
+		" Vim nodejs
+		Bundle 'moll/vim-node'
+		" Vim js more beatiful
+		"Bundle 'maksimr/vim-jsbeautify'
+		"Bundle 'einars/js-beautify'
+		" JS completion
+		"Bundle 'ahayman/vim-nodejs-complete'
+		" SuperTab for autocomplete
+		Bundle 'ervandew/supertab'
 	" }
 
 	" required!
@@ -108,18 +107,18 @@ set nocompatible
 		autocmd FileType php        set shiftwidth=4 | set expandtab
 		autocmd FileType html       set shiftwidth=2 | set expandtab | set softtabstop=2
 		autocmd FileType eruby      set shiftwidth=2 | set expandtab | set softtabstop=2
-		autocmd FileType javascript set shiftwidth=2 | set expandtab | set softtabstop=2
+		autocmd FileType javascript set shiftwidth=4 | set expandtab | set softtabstop=4
 		autocmd FileType go         set shiftwidth=4 | set softtabstop=2
 		"autocmd Filetype gitcommit  setlocal spell textwidth=72
 	" }
+
 	" 设置代码折叠 {
 	set foldmethod=marker
 	set foldnestmax=3
 	set foldenable
-	"set nofoldenable
-	"set foldclose=all
 	" }
 " }
+
 " display setting {
 	" 显示状态栏 (默认值为 1, 无法显示状态栏)
 	set laststatus=2
@@ -134,12 +133,17 @@ set nocompatible
 	syntax on
 	" 设置backspace
 	set backspace=indent,eol,start
+	"set lazyredraw
 " }
 
 " key map {
 	" <leader> key setting {
 		let mapleader = ","
 		let g:mapleader = ","
+		nmap <M-j> mz:m+<cr>`z
+		nmap <M-k> mz:m-2<cr>`z
+		vmap <M-j> :m'>+<cr>`<my`>mzgv`yo`z
+		vmap <M-k> :m'<-2<cr>`>my`<mzgv`yo`z
 	" }
 
 	" fast change panel {
@@ -175,7 +179,8 @@ set nocompatible
 	let Tlist_Ctags_Cmd = '/usr/local/bin/ctags'
 
 	" status自定义显示 {
-	set statusline=Sheldon 
+	set statusline=\ Ray 
+	set statusline=\ Sheldon 
 	set statusline+=\ ░\ Git:\ %{GitBranchInfoTokens()[0]}\ ░
 	set statusline+=\ %f%m
 	set statusline+=%=%{''.(&fenc!=''?&fenc:&enc).''}
@@ -183,22 +188,26 @@ set nocompatible
 	set statusline+=\ ░\ %y
 	set statusline+=\ ░\ [%-8.(%l,%c%)\ %-4.(%p%%%)]
 	" }
-	" 设置golang complete格式 {
-	"set completeopt=longest,menu
+
+	" 设置complete格式 {
+	set completeopt=longest,menu
 	" }
+
 	"vim-flake8 python plugin
-	autocmd BufWritePost *.py call Flake8()
-	map <leader>i :call Flake8()<CR>
-	let g:flake8_ignore="F403,E501"
+	"autocmd BufWritePost *.py call Flake8()
+	"map <leader>i :call Flake8()<CR>
+	"let g:flake8_ignore="F403,E501"
+"
 	" 设置代码indentLine的标示
 	let g:indentLine_char = '┆'
 	let g:indentLine_color_term = 239
-	"let g:indentLine_color_gui = '#6A4C9C'
+
 	" 设置命名列表 {
 	set wildmode=list:longest
 	set wildmenu
 	set wildignore=*.o,*.obj.*.~
 	" }
+
 	" Tabular config and key map {
 	nmap <Leader>a= :Tabularize /=<CR>
 	vmap <Leader>a= :Tabularize /=<CR>
@@ -216,3 +225,6 @@ set nocompatible
 		endif
 	endfunction
 	" }
+
+	" Js Beatiful
+	"map <c-f> :call JsBeautify()<cr>

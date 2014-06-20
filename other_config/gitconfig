@@ -1,21 +1,28 @@
 [user]
 	name = Chenxiaotao
 	email = chenxiaotao3@gmail.com
+
 [core]
-	editor = /usr/bin/vim
+	excludesfile = /Users/Ray/.gitignore_global
+	editor       = /usr/bin/vim
+
 [alias]
-	logger = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
-	mer = merge --no-ff
-	#mer = merge
-	co = checkout
-	ca = commit -a
-	st  = status
-	br = branch
-	bra = branch -a
+	mer = merge
+	c   = checkout
+	ca  = commit -a
+	s   = status
+	b   = branch
+	ba  = branch -a
+	df  = diff
+	pl  = pull
+	ps  = push
 	pso = push origin
 	plo = pull origin
-	#plo = pull --no-ff origin
-	ft = fetch
+	ft  = fetch origin
 	ftp = fetch -p origin
+
 [push]
 	default = simple
+
+[branch]
+	autosetuprebase = always
