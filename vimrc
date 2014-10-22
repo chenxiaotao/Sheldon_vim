@@ -18,6 +18,7 @@ set nocompatible
 		" The-NERD-tree
 		Bundle 'scrooloose/nerdtree'
 		Bundle 'scrooloose/nerdcommenter'
+        Bundle 'scrooloose/syntastic'
 		" Git
 		Bundle 'Git-Branch-Info'
 		Bundle 'tpope/vim-fugitive'
@@ -179,7 +180,6 @@ set nocompatible
 	let Tlist_Ctags_Cmd = '/usr/local/bin/ctags'
 
 	" status自定义显示 {
-	set statusline=\ Ray 
 	set statusline=\ Sheldon 
 	set statusline+=\ ░\ Git:\ %{GitBranchInfoTokens()[0]}\ ░
 	set statusline+=\ %f%m
