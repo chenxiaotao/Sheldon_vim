@@ -28,7 +28,8 @@ set nocompatible
 		Bundle 'chriskempson/vim-tomorrow-theme'
 		" Auto close the block
 		Bundle "vim-scripts/matchit.zip"
-		Bundle "jiangmiao/auto-pairs"
+        "自动补齐标点符号
+		"Bundle "jiangmiao/auto-pairs"
 		" ctrlp.vim
 		Bundle 'kien/ctrlp.vim'
 		" vim plugin for Ruby
