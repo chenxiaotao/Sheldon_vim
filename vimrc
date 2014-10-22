@@ -23,7 +23,7 @@ set nocompatible
 		Bundle 'Git-Branch-Info'
 		Bundle 'tpope/vim-fugitive'
 		" Taglist
-		Bundle 'kemadz/taglist'
+		Bundle 'vim-scripts/taglist.vim'
 		" color colorscheme
 		Bundle 'chriskempson/vim-tomorrow-theme'
 		" Auto close the block
@@ -42,7 +42,7 @@ set nocompatible
 		" tabular #code formate
 		Bundle 'godlygeek/tabular'
 		" Yggdroot indentLine
-		Bundle 'Yggdroot/indentLine'
+		" Bundle 'Yggdroot/indentLine'
 		Bundle 'mangege/web-indent'
 		"a css/html helper
 		"Bundle 'ZenCoding.vim'
@@ -199,7 +199,7 @@ set nocompatible
 	"let g:flake8_ignore="F403,E501"
 "
 	" 设置代码indentLine的标示
-	let g:indentLine_char = '┆'
+	" let g:indentLine_char = '|'
 	let g:indentLine_color_term = 239
 
 	" 设置命名列表 {
