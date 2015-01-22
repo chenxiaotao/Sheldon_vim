@@ -46,14 +46,14 @@ set nocompatible
 		" Bundle 'Yggdroot/indentLine'
 		Bundle 'mangege/web-indent'
 		"a css/html helper
-		"Bundle 'ZenCoding.vim'
+		Bundle 'ZenCoding.vim'
 		" Vim python plugin
 		"Bundle 'hynek/vim-python-pep8-indent'
 		"Bundle 'nvie/vim-flake8'
 		" Coffee script
-		"Bundle 'kchmck/vim-coffee-script'
+		Bundle 'kchmck/vim-coffee-script'
 		" Vim golang plugin
-		"Bundle 'jnwhiteh/vim-golang'
+		Bundle 'jnwhiteh/vim-golang'
 		" Vim nodejs
 		Bundle 'moll/vim-node'
 		" Vim js more beatiful
