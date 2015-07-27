@@ -212,6 +212,10 @@ set nocompatible
 	nmap <Leader>a= :Tabularize /=<CR>
 	vmap <Leader>a= :Tabularize /=<CR>
 	nmap <Leader>a: :Tabularize /:\zs<CR>
+	" 快捷键
+	nmap ff :NERDTreeFind <CR>
+	nmap gb :Gblame <CR>
+
 	vmap <Leader>a: :Tabularize /:\zs<CR>
 	" inoremap <silent> <Bar>   <Bar><Esc>:call <SID>align()<CR>a
 	function! s:align()
