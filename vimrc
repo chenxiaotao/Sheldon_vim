@@ -18,22 +18,26 @@ set nocompatible
 		" The-NERD-tree
 		Bundle 'scrooloose/nerdtree'
 		Bundle 'scrooloose/nerdcommenter'
-        Bundle 'scrooloose/syntastic'
 		" Git
-		Bundle 'Git-Branch-Info'
 		Bundle 'tpope/vim-fugitive'
 		" Taglist
 		Bundle 'vim-scripts/taglist.vim'
 		" color colorscheme
-		Bundle 'chriskempson/vim-tomorrow-theme'
+		Bundle 'MxBird/CodeSchool.vim'
+		Bundle 'jpo/vim-railscasts-theme'
+
+		"Bundle 'chriskempson/vim-tomorrow-theme'
+		"Bundle 'altercation/vim-colors-solarized'
+		"Bundle 'spf13/vim-colors'
+
 		" Auto close the block
 		Bundle "vim-scripts/matchit.zip"
-        "自动补齐标点符号
-		"Bundle "jiangmiao/auto-pairs"
+		" 自动补齐各种符号
+		" Bundle "jiangmiao/auto-pairs"
 		" ctrlp.vim
 		Bundle 'kien/ctrlp.vim'
 		" vim plugin for Ruby
-		"Bundle 'vim-ruby/vim-ruby'
+		Bundle 'vim-ruby/vim-ruby'
 		Bundle 'tpope/vim-rails'
 		Bundle 'tpope/vim-surround'
 		" Vim yaml plugin
@@ -43,20 +47,19 @@ set nocompatible
 		" tabular #code formate
 		Bundle 'godlygeek/tabular'
 		" Yggdroot indentLine
-		" Bundle 'Yggdroot/indentLine'
+		Bundle 'Yggdroot/indentLine'
 		Bundle 'mangege/web-indent'
 		"a css/html helper
 		"Bundle 'ZenCoding.vim'
-		Bundle 'mattn/zencoding-vim'
 		" Vim python plugin
 		"Bundle 'hynek/vim-python-pep8-indent'
 		"Bundle 'nvie/vim-flake8'
 		" Coffee script
-		Bundle 'kchmck/vim-coffee-script'
+		"Bundle 'kchmck/vim-coffee-script'
 		" Vim golang plugin
-		Bundle 'jnwhiteh/vim-golang'
+		"Bundle 'jnwhiteh/vim-golang'
 		" Vim nodejs
-		Bundle 'moll/vim-node'
+		"Bundle 'moll/vim-node'
 		" Vim js more beatiful
 		"Bundle 'maksimr/vim-jsbeautify'
 		"Bundle 'einars/js-beautify'
@@ -94,13 +97,13 @@ set nocompatible
 	" 开始行号
 	set number
 	" 设定 << 和 >> 命令移动时的宽度为 4
-	set shiftwidth=4
+	set shiftwidth=2
 	" 使得按退格键时可以一次删掉 4 个空格
-	set softtabstop=4
+	set softtabstop=2
 	" 设定 tab 长度为 4
-	set tabstop=4
+	set tabstop=2
 	" 设定提示宽度的标尺为100个字符
-	set textwidth=100
+	set cc=80
 	" 光标距离上下边距行数
 	set so=3
 	" 为这些语言设置缩进风格 {
@@ -112,26 +115,25 @@ set nocompatible
 		autocmd FileType eruby      set shiftwidth=2 | set expandtab | set softtabstop=2
 		autocmd FileType javascript set shiftwidth=4 | set expandtab | set softtabstop=4
 		autocmd FileType go         set shiftwidth=4 | set softtabstop=2
-		"autocmd Filetype gitcommit  setlocal spell textwidth=72
 	" }
 
 	" 设置代码折叠 {
-	set foldmethod=marker
-	set foldnestmax=3
-	set foldenable
+	" set foldmethod=marker
+	" set foldnestmax=3
+	" set foldenable
 	" }
 " }
 
 " display setting {
 	" 显示状态栏 (默认值为 1, 无法显示状态栏)
-	set laststatus=2
+	"set laststatus=2
 	" 搜索时高亮显示被找到的文本
 	set hlsearch
 	" 输入搜索内容时就显示搜索结果
 	set incsearch
 	" 显示tab以及空格
-	set list
-	set listchars=tab:>-,trail:·
+	" set list
+	" set listchars=tab:>-,trail:·
 	" syntax on
 	syntax on
 	" 设置backspace
@@ -143,10 +145,6 @@ set nocompatible
 	" <leader> key setting {
 		let mapleader = ","
 		let g:mapleader = ","
-		nmap <M-j> mz:m+<cr>`z
-		nmap <M-k> mz:m-2<cr>`z
-		vmap <M-j> :m'>+<cr>`<my`>mzgv`yo`z
-		vmap <M-k> :m'<-2<cr>`>my`<mzgv`yo`z
 	" }
 
 	" fast change panel {
@@ -182,7 +180,7 @@ set nocompatible
 	let Tlist_Ctags_Cmd = '/usr/local/bin/ctags'
 
 	" status自定义显示 {
-	set statusline=\ Sheldon 
+	set statusline=\ Sheldon
 	set statusline+=\ ░\ Git:\ %{GitBranchInfoTokens()[0]}\ ░
 	set statusline+=\ %f%m
 	set statusline+=%=%{''.(&fenc!=''?&fenc:&enc).''}
@@ -201,13 +199,13 @@ set nocompatible
 	"let g:flake8_ignore="F403,E501"
 "
 	" 设置代码indentLine的标示
-	" let g:indentLine_char = '|'
+	let g:indentLine_char = '┆'
 	let g:indentLine_color_term = 239
 
 	" 设置命名列表 {
 	set wildmode=list:longest
 	set wildmenu
-	set wildignore=*.o,*.obj.*.~
+	set wildignore=.*,*.o,*.obj.*.~
 	" }
 
 	" Tabular config and key map {
@@ -215,7 +213,7 @@ set nocompatible
 	vmap <Leader>a= :Tabularize /=<CR>
 	nmap <Leader>a: :Tabularize /:\zs<CR>
 	vmap <Leader>a: :Tabularize /:\zs<CR>
-	inoremap <silent> <Bar>   <Bar><Esc>:call <SID>align()<CR>a
+	" inoremap <silent> <Bar>   <Bar><Esc>:call <SID>align()<CR>a
 	function! s:align()
 		let p = '^\s*|\s.*\s|\s*$'
 		if exists(':Tabularize') && getline('.') =~# '^\s*|' && (getline(line('.')-1) =~# p || getline(line('.')+1) =~# p)
@@ -227,6 +225,9 @@ set nocompatible
 		endif
 	endfunction
 	" }
+	
+	"让vim记住最后一次编辑的位置
+	autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 
 	" Js Beatiful
 	"map <c-f> :call JsBeautify()<cr>

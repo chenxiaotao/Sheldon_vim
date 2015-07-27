@@ -1,9 +1,8 @@
 [user]
-	name = Chenxiaotao
+	name = chenxiaotao
 	email = chenxiaotao3@gmail.com
 
 [core]
-	excludesfile = /Users/Ray/.gitignore_global
 	editor       = /usr/bin/vim
 
 [alias]
@@ -13,13 +12,14 @@
 	s   = status
 	b   = branch
 	ba  = branch -a
-	df  = diff
-	pl  = pull
+	d   = diff
+	dd  = diff develop
+	pld = pull origin develop
 	ps  = push
 	pso = push origin
 	plo = pull origin
-	ft  = fetch origin
-	ftp = fetch -p origin
+	ftp = fetch -p --all
+	r   = review
 	lg  = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
 
 [push]
@@ -27,3 +27,10 @@
 
 [branch]
 	autosetuprebase = always
+
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Users/Sheldon/Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
