@@ -1,0 +1,8 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =6
+let g:netrw_dirhist_1='/usr/local/var/rbenv/versions/2.1.1/gemsets/zhe800_gemset/extensions/x86_64-darwin-14/2.1.0-static/thin-1.6.2'
+let g:netrw_dirhist_2='/Users/Sheldon/Github/system_conf/MxBird-Vim/vim'
+let g:netrw_dirhist_3='/Users/Sheldon/work/zhe800_dev'
+let g:netrw_dirhist_4='/Users/Sheldon/Github/system_conf/MxBird-Vim/vim/bundle'
+let g:netrw_dirhist_5='/Users/Sheldon/Github/Sheldon_vim/other_config'
+let g:netrw_dirhist_6='/Users/Sheldon/Github/Sheldon_vim/.git'
