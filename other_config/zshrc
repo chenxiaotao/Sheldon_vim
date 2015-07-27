@@ -89,3 +89,5 @@ if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
 
 export EDITOR='vim'
 export DISABLE_AUTO_TITLE=true
+
+alias gbda='git branch |grep "feature" |xargs git branch -D'
