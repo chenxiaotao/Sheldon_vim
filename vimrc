@@ -33,7 +33,7 @@ set nocompatible
 		" Auto close the block
 		Bundle "vim-scripts/matchit.zip"
 		" 自动补齐各种符号
-		" Bundle "jiangmiao/auto-pairs"
+		" Bundle 'jiangmiao/auto-pairs'
 		" ctrlp.vim
 		Bundle 'kien/ctrlp.vim'
 		" vim plugin for Ruby
@@ -153,6 +153,8 @@ set nocompatible
 		nmap <c-j> <c-w><c-j>
 		nmap <c-k> <c-w><c-k>
 		nmap <c-l> <c-w><c-l>
+		nmap ff :NERDTreeFind <CR>
+		nmap gb :Gblame <CR>
 	" }
 
 	" 快速退出
