@@ -96,14 +96,16 @@ set nocompatible
 " format setting {
 	" 开始行号
 	set number
-	" 设定 << 和 >> 命令移动时的宽度为 4
+	" 设定 << 和 >> 命令移动时的宽度为 2
 	set shiftwidth=2
-	" 使得按退格键时可以一次删掉 4 个空格
+	" 使用space替换tab的输入
+	set expandtab
+	" 使得按退格键时可以一次删掉 2 个空格
 	set softtabstop=2
-	" 设定 tab 长度为 4
+	" 设定 tab 长度为 2
 	set tabstop=2
 	" 设定提示宽度的标尺为100个字符
-	set cc=80
+	" set cc=100
 	" 光标距离上下边距行数
 	set so=3
 	" 为这些语言设置缩进风格 {
