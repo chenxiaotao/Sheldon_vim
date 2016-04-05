@@ -20,6 +20,7 @@ set nocompatible
 		Bundle 'scrooloose/nerdcommenter'
 		" Git
 		Bundle 'tpope/vim-fugitive'
+    Bundle 'airblade/vim-gitgutter'
 		" Taglist
 		Bundle 'vim-scripts/taglist.vim'
 		" color colorscheme
@@ -31,9 +32,9 @@ set nocompatible
 		"Bundle 'spf13/vim-colors'
 
 		" Auto close the block
-		Bundle "vim-scripts/matchit.zip"
+		Bundle 'vim-scripts/matchit.zip'
 		" 自动补齐各种符号
-		" Bundle "jiangmiao/auto-pairs"
+		" Bundle 'jiangmiao/auto-pairs'
 		" ctrlp.vim
 		Bundle 'kien/ctrlp.vim'
 		" vim plugin for Ruby
@@ -115,7 +116,7 @@ set nocompatible
 		autocmd FileType php        set shiftwidth=4 | set expandtab
 		autocmd FileType html       set shiftwidth=2 | set expandtab | set softtabstop=2
 		autocmd FileType eruby      set shiftwidth=2 | set expandtab | set softtabstop=2
-		autocmd FileType javascript set shiftwidth=4 | set expandtab | set softtabstop=4
+		autocmd FileType javascript set shiftwidth=2 | set expandtab | set softtabstop=2
 		autocmd FileType go         set shiftwidth=4 | set softtabstop=2
 	" }
 
