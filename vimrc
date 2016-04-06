@@ -42,14 +42,15 @@ set nocompatible
 		Bundle 'tpope/vim-rails'
 		Bundle 'tpope/vim-surround'
 		" Vim yaml plugin
-		Bundle 'avakhov/vim-yaml'
+    Bundle 'mrk21/yaml-vim'
+    Bundle 'chase/vim-ansible-yaml'
 		" Markdown hightline plugin
 		"Bundle 'Markdown'
 		" tabular #code formate
 		Bundle 'godlygeek/tabular'
 		" Yggdroot indentLine
 		Bundle 'Yggdroot/indentLine'
-		Bundle 'mangege/web-indent'
+		"Bundle 'mangege/web-indent'
 		"a css/html helper
 		"Bundle 'ZenCoding.vim'
 		" Vim python plugin
@@ -63,7 +64,7 @@ set nocompatible
 		"Bundle 'moll/vim-node'
 		" Vim js more beatiful
 		"Bundle 'maksimr/vim-jsbeautify'
-		Bundle 'einars/js-beautify'
+		"Bundle 'einars/js-beautify'
 		" JS completion
 		"Bundle 'ahayman/vim-nodejs-complete'
 		" SuperTab for autocomplete
