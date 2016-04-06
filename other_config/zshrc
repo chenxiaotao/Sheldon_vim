@@ -91,3 +91,5 @@ export EDITOR='vim'
 export DISABLE_AUTO_TITLE=true
 
 alias gbda='git branch |grep "feature" |xargs git branch -D'
+
+alias tnpm="npm --registry=http://npm.tuan800-inc.com --cache=$HOME/.npm/.cache/tnpm --userconfig=$HOME/.tnpmrc"

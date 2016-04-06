@@ -63,7 +63,7 @@ set nocompatible
 		"Bundle 'moll/vim-node'
 		" Vim js more beatiful
 		"Bundle 'maksimr/vim-jsbeautify'
-		"Bundle 'einars/js-beautify'
+		Bundle 'einars/js-beautify'
 		" JS completion
 		"Bundle 'ahayman/vim-nodejs-complete'
 		" SuperTab for autocomplete
