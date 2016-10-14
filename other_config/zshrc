@@ -65,7 +65,9 @@ source $ZSH/oh-my-zsh.sh
 # ssh
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
 
+# 设置远程Linux机器避免乱码
 export LANG=zh_CN.UTF-8
+export LC_CTYPE=zh_CN.UTF-8
 
 [[ -s `brew --prefix`/etc/autojump.sh ]] && . `brew --prefix`/etc/autojump.sh
 
