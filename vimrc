@@ -69,6 +69,8 @@ set nocompatible
 		"Bundle 'ahayman/vim-nodejs-complete'
 		" SuperTab for autocomplete
 		Bundle 'ervandew/supertab'
+    " ale code style
+    Bundle 'w0rp/ale'
 	" }
 
 	" required!
@@ -193,6 +195,18 @@ set nocompatible
 	set statusline+=\ ░\ [%-8.(%l,%c%)\ %-4.(%p%%%)]
 	" }
 
+  " ale code style set
+  let g:ale_lint_on_save = 0
+  let g:ale_lint_on_text_changed = 1
+  " You can disable this option too
+  " if you don't want linters to run on opening a file
+  let g:ale_lint_on_enter = 1
+  let g:ale_linters = {'ruby': ['rubocop']}
+  "let g:ale_linters = {'javascript': ['eslint']}
+  nmap <silent> <C-k> <Plug>(ale_previous_wrap)
+  nmap <silent> <C-j> <Plug>(ale_next_wrap)
+  
+  set fileencodings=ucs-bom,utf-8,cp936,gb18030,big5,euc-jp,euc-kr,latin1
 	" 设置complete格式 {
 	set completeopt=longest,menu
 	" }
