@@ -95,3 +95,9 @@ export DISABLE_AUTO_TITLE=true
 alias gbda='git branch |grep "feature" |xargs git branch -D'
 
 alias tnpm="npm --registry=http://npm.tuan800-inc.com --cache=$HOME/.npm/.cache/tnpm --userconfig=$HOME/.tnpmrc"
+
+[[ -s "/Users/Sheldon/.gvm/scripts/gvm" ]] && source "/Users/Sheldon/.gvm/scripts/gvm"
+export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.ustc.edu.cn/homebrew-bottles
+
+export NVM_DIR="/Users/Sheldon/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm

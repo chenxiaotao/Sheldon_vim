@@ -59,9 +59,9 @@ set nocompatible
 		" Coffee script
 		"Bundle 'kchmck/vim-coffee-script'
 		" Vim golang plugin
-		"Bundle 'jnwhiteh/vim-golang'
+		Bundle 'fatih/vim-go'
 		" Vim nodejs
-		"Bundle 'moll/vim-node'
+		Bundle 'moll/vim-node'
 		" Vim js more beatiful
 		"Bundle 'maksimr/vim-jsbeautify'
 		"Bundle 'einars/js-beautify'
@@ -120,7 +120,7 @@ set nocompatible
 		autocmd FileType html       set shiftwidth=2 | set expandtab | set softtabstop=2
 		autocmd FileType eruby      set shiftwidth=2 | set expandtab | set softtabstop=2
 		autocmd FileType javascript set shiftwidth=2 | set expandtab | set softtabstop=2
-		autocmd FileType go         set shiftwidth=4 | set softtabstop=2
+		autocmd FileType go         set shiftwidth=2 | set expandtab | set softtabstop=2
 	" }
 
 	" 设置代码折叠 {
